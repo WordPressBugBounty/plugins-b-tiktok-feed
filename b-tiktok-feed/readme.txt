@@ -17,7 +17,7 @@ B Tiktok Feed Plugin is a block plugin by which you can embed your Tiktok feed o
 We have developed it in such a way that any user can give any desired look and feel on the widget. There are many options available by which you can turn your website visitors to Tiktok followers.
 
 
-**[Demos](https://wptiktokfeed.com/#demos)**
+**[Demos](https://wptiktokfeed.com/#demos) || [Get Pro Version](https://bplugins.com/products/my-social-feeds/#pricing)**
 
 = Quick start tutorial =
 https://www.youtube.com/watch?v=8BRnf0wbbdQ
