@@ -1,10 +1,10 @@
- === Tiktok Feed - TikTok feed plugin for WP ===
+ === Feeds For TikTok - TikTok feed plugin for WP ===
 Contributors: bplugins, abuhayat, btechnologies
 Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: block, tiktok, feed, tiktok gallery, tiktok plugin
-Requires at least: 5.8+
-Tested up to: 6.6.2
-Stable tag: 1.0.16 
+Requires at least: 6.5+
+Tested up to: 6.7
+Stable tag: 1.0.17
 Requires PHP: 7.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -161,6 +161,9 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 == Changelog ==
 
+= 1.0.17 - 23 Nov, 2024 =
+* _load_textdomain_just_in_time notice solved
+
 = 1.0.16 - 1 Oct, 24 =
 * Good news! The pro features are now available on Freemius.
 
@@ -224,6 +227,9 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 * Initial Release
 
 == Upgrade Notice ==
+
+= 1.0.17 - 23 Nov, 2024 =
+* _load_textdomain_just_in_time notice solved
 
 = 1.0.16 - 1 Oct, 24 =
 * Good news! The pro features are now available on Freemius.
