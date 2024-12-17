@@ -1,8 +1,8 @@
 <?php
 /**
- * Plugin Name: B Tiktok Feed
+ * Plugin Name: Feeds For TikTok
  * Description: Embed Tiktok feed in your website
- * Version: 1.0.17
+ * Version: 1.0.18
  * Author: bPlugins
  * Author URI: http://bplugins.com
  * License: GPLv3
@@ -19,11 +19,6 @@ register_activation_hook(__FILE__, function () {
 	}  
 });
 
-// Constant
-define( 'TTP_PLUGIN_VERSION', isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '1.0.17' );
-define('TTP_DIR', plugin_dir_url(__FILE__));
-define('TTP_ASSETS_DIR', plugin_dir_url(__FILE__) . 'assets/');
-
 if (!function_exists('ttp_init')) {
     function ttp_init()
     {
@@ -36,21 +31,51 @@ if (!function_exists('ttp_init')) {
     $ttp_bs->uninstall_plugin(__FILE__);
 }
 
-// TikTok
-if(!class_exists('TTPTiktok')) {
+class TTP_Tiktok {
 
-    class TTPTiktok
-    {
-        public function __construct()
-        {
-            add_action('enqueue_block_assets', [$this, 'enqueueTiktokAssets']);
-            add_action('admin_enqueue_scripts', [$this, 'adminEnqueueScripts']);
-            add_action('init', [$this, 'onInit']);
-            add_action('admin_footer', [$this, 'load_tiktok_script'], 10);
-            add_action('wp_footer', [$this, 'load_tiktok_script'], 10);
+    private static $instance;
+
+    private function __construct() {
+        $this->defined_constants();
+        $this->load_classes();
+
+        add_action('enqueue_block_assets', [$this, 'enqueueTiktokAssets']);
+        add_action('admin_enqueue_scripts', [$this, 'adminEnqueueScripts']);
+        add_action('init', [$this, 'onInit']);
+        add_action('admin_footer', [$this, 'load_tiktok_script'], 10);
+        add_action('wp_footer', [$this, 'load_tiktok_script'], 10);
+    }
+
+    public static function get_instance() {
+
+        if (self::$instance) {
+            return self::$instance;
         }
 
-        public function load_tiktok_script()
+        self::$instance = new self();
+        return self::$instance;
+    }
+
+    public function defined_constants(){
+        define( 'TTP_PLUGIN_VERSION', isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '1.0.18' );
+        define('TTP_DIR', plugin_dir_url(__FILE__));
+        define('TTP_ASSETS_DIR', plugin_dir_url(__FILE__) . 'assets/');
+    }
+
+    public function load_classes() {
+        
+        global $ttp_bs;
+
+        require_once plugin_dir_path(__FILE__) . 'includes/api/TiktokAPI.php';
+        new TTP_TikTok\TTP_TikTok_Api();
+
+		if($ttp_bs->can_use_premium_feature()){ 
+            require_once plugin_dir_path(__FILE__) . 'includes/post-type/custom-post.php';
+            new TTP_TikTok\TTP_Custom_Post_Type();
+        }
+    }
+
+    public function load_tiktok_script()
         {
             ?>
             <script async src="https://www.tiktok.com/embed.js"></script>
@@ -118,9 +143,6 @@ if(!class_exists('TTPTiktok')) {
 
             <?php return ob_get_clean();
         } // Render
-    }
-    new TTPTiktok();
-
-    require_once plugin_dir_path(__FILE__) . '/TiktokAPI.php';
-    require_once plugin_dir_path(__FILE__) . '/custom-post.php';
 }
+
+TTP_Tiktok::get_instance();
