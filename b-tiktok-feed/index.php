@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Feeds For TikTok
  * Description: Embed Tiktok feed in your website
- * Version: 1.0.18
+ * Version: 1.0.19
  * Author: bPlugins
  * Author URI: http://bplugins.com
  * License: GPLv3
@@ -57,7 +57,7 @@ class TTP_Tiktok {
     }
 
     public function defined_constants(){
-        define( 'TTP_PLUGIN_VERSION', isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '1.0.18' );
+        define( 'TTP_PLUGIN_VERSION', isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '1.0.19' );
         define('TTP_DIR', plugin_dir_url(__FILE__));
         define('TTP_ASSETS_DIR', plugin_dir_url(__FILE__) . 'assets/');
     }
