@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Feeds For TikTok
  * Description: Embed Tiktok feed in your website
- * Version: 1.0.21
+ * Version: 1.0.22
  * Author: bPlugins
  * Author URI: http://bplugins.com
  * License: GPLv3
@@ -57,7 +57,7 @@ class TTP_Tiktok {
     }
 
     public function defined_constants(){
-        define( 'TTP_PLUGIN_VERSION', isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '1.0.21' );
+        define( 'TTP_PLUGIN_VERSION', isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '1.0.22' );
         define('TTP_DIR', plugin_dir_url(__FILE__));
         define('TTP_ASSETS_DIR', plugin_dir_url(__FILE__) . 'assets/');
     }
@@ -85,23 +85,17 @@ class TTP_Tiktok {
         public function enqueueTiktokAssets()
         {
             wp_register_style('ttp-fancyApp', TTP_ASSETS_DIR . 'css/fancyapps.min.css');
-
             wp_register_script('ttp-fancyApp', TTP_ASSETS_DIR . 'js/fancyapps.min.js', [], TTP_PLUGIN_VERSION);
 
-            wp_register_script('ttp-script', TTP_DIR . 'dist/script.js', ['react', 'react-dom', 'ttp-fancyApp', 'wp-i18n'], TTP_PLUGIN_VERSION);
-
-            wp_register_style('ttp-style', plugins_url('dist/style.css', __FILE__), ['ttp-fancyApp'], TTP_PLUGIN_VERSION); // Frontend Style
-
-            wp_localize_script('ttp-script', 'ttpData', [
+            wp_localize_script('ttp-fancyApp', 'ttpData', [
                 'ajaxUrl' => admin_url('admin-ajax.php'),
                 'tiktokAuthorized' => false !== get_transient('ttp_tiktok_authorized_data'),
-                'nonce' => wp_create_nonce('wp_rest'),
+                'nonce' => wp_create_nonce('ttp_fetch_data_nonce'),
             ]);
 
             wp_localize_script('ttp-tiktok-player-editor-script', 'ttpPatters', [
                 'patternsImagePath' => TTP_DIR . 'assets/images/patterns/',
             ]);
-
         }
 
         public function adminEnqueueScripts($hook)
@@ -111,38 +105,10 @@ class TTP_Tiktok {
                 wp_enqueue_script('ttpAdmin', TTP_ASSETS_DIR . 'js/admin.js', ['wp-i18n'], TTP_PLUGIN_VERSION, true);
             }
         }
-
-        public function onInit()
-        {
-            wp_register_style('ttp-tiktok-editor-style', plugins_url('dist/editor.css', __FILE__), ['wp-edit-blocks', 'ttp-style'], TTP_PLUGIN_VERSION); // Backend Style
-
-            register_block_type(__DIR__, [
-                'editor_style' => 'ttp-tiktok-editor-style',
-                'render_callback' => [$this, 'render'],
-            ]); // Register Block
-
-            wp_set_script_translations('ttp-tiktok-player-editor-script', 'tiktok', plugin_dir_path(__FILE__) . 'languages'); // Translate
+        
+        public function onInit(){
+            register_block_type( __DIR__ . '/build' );
         }
-
-        public function render($attributes)
-        {
-            extract($attributes);
-
-            $className = $className ?? '';
-            $ttpBlockClassName = 'wp-block-ttp-tiktok-player ' . $className . ' align' . $align;
-
-            $videos = get_transient('ttp_tiktok_videos');
-            $user_info = get_transient('ttp_tiktok_user_info');
-
-            wp_enqueue_style('ttp-style');
-            wp_enqueue_script('ttp-script');
-
-            ob_start();
-            ?>
-            <div class='<?php echo esc_attr($ttpBlockClassName); ?>' data-data="<?php echo esc_attr(wp_json_encode(compact('videos', 'user_info'))) ?>"  id='ttpTiktok-<?php echo esc_attr($cId) ?>' data-attributes='<?php echo esc_attr(wp_json_encode($attributes)); ?>'></div>
-
-            <?php return ob_get_clean();
-        } // Render
 }
 
 TTP_Tiktok::get_instance();

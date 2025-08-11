@@ -40,7 +40,7 @@ if(!class_exists('TTP_TikTok_Api')) {
 
         public function ttp_tiktok_videos()
         {
-            if (!wp_verify_nonce(sanitize_text_field($_GET['nonce']), 'wp_rest')) {
+            if (!wp_verify_nonce(sanitize_text_field($_GET['nonce']), 'ttp_fetch_data_nonce')) {
                 wp_die();
             }
 
@@ -135,7 +135,7 @@ if(!class_exists('TTP_TikTok_Api')) {
 
             $accessToken = $access_token;
 
-            return wp_send_json(compact('videos', 'user_info', 'accessToken', 'access_token'));
+            return wp_send_json(compact('videos', 'user_info'));
         } // getData
 
         public function ttp_tiktok_clear()
@@ -196,7 +196,7 @@ if(!class_exists('TTP_TikTok_Api')) {
         {
             $tiktok_info = get_transient('ttp_tiktok_authorized_data');
             if (false === get_transient('ttp_tiktok_access_token') && $tiktok_info) {
-                $response = wp_remote_post('https://api. bplugins.com/wp-json/tiktok/v1/refresh-token', [
+                $response = wp_remote_post('https://api.bplugins.com/wp-json/tiktok/v1/refresh-token', [
                     'method' => 'POST',
                     'body' => [
                         'refresh_token' => $tiktok_info['refresh_token'],
