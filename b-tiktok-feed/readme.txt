@@ -1,9 +1,9 @@
- === Feeds For TikTok - TikTok feed plugin for WP ===
+ === Feeds For TikTok – Show TikTok Videos in Grid or Feed Layout ===
 Contributors: bplugins, abuhayat, btechnologies
 Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: block, tiktok, feed, tiktok gallery, tiktok plugin
-Requires at least: 6.5+
-Tested up to: 6.8
+Requires at least: 6.5+ 
+Tested up to: 6.8 
 Stable tag: 1.0.22
 Requires PHP: 7.1
 License: GPLv3 or later
