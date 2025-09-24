@@ -3,7 +3,7 @@ Contributors: bplugins, abuhayat, btechnologies
 Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: block, tiktok, feed, tiktok gallery, tiktok plugin
 Requires at least: 6.5+ 
-Tested up to: 6.8 
+Tested up to: 6.8.2
 Stable tag: 1.0.22
 Requires PHP: 7.1
 License: GPLv3 or later
