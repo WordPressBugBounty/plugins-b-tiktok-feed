@@ -1,10 +1,10 @@
- === Feeds For TikTok – Show TikTok Videos in Grid or Feed Layout ===
+ === Feeds for TikTok – Display Video Feeds in Grid Layouts ===
 Contributors: bplugins, abuhayat, btechnologies
 Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: block, tiktok, feed, tiktok gallery, tiktok plugin
-Requires at least: 6.5+ 
-Tested up to: 6.8.2
-Stable tag: 1.0.22
+Requires at least: 6.5+
+Tested up to: 6.9
+Stable tag: 1.0.25
 Requires PHP: 7.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -143,6 +143,10 @@ You can use unlimited times as you want.
 
 You can post your questions on the [support forum here](https://wordpress.org/support/plugin/b-tiktok-feed/)
 
+= Where do I report security bugs found in this plugin? =
+
+Please report security bugs found in the source code of the Tiktok Feed plugin through the [Patchstack Vulnerability Disclosure Program](https://patchstack.com/database/vdp/9e5fbc26-6328-4012-8bcb-4447159584af). The Patchstack team will assist you with verification, CVE assignment, and notify the developers of this plugin.
+
 
 == Screenshots ==
 
@@ -160,6 +164,15 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 12. Vertical profile default center
 
 == Changelog ==
+
+= 1.0.25 - 18 Jan, 2026 =
+* The broken access control vulnerability has been fixed.
+
+= 1.0.24 - 20 Dec, 2025 =
+* Nonce Verify admin_init;
+
+= 1.0.23 - 18 Nov, 2025 =
+* Solved Patchstack vulnerability issues;
 
 = 1.0.22 - 11 Aug, 2025 = 
 * The Broken Access Control vulnerability has been resolved;
@@ -242,6 +255,15 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 * Initial Release
 
 == Upgrade Notice ==
+
+= 1.0.25 - 18 Jan, 2026 =
+* The broken access control vulnerability has been fixed.
+
+= 1.0.24 - 20 Dec, 2025 =
+* Nonce Verify admin_init;
+
+= 1.0.23 - 18 Nov, 2025 =
+* Solved Patchstack vulnerability issues;
 
 = 1.0.22 - 11 Aug, 2025 =
 * The Broken Access Control vulnerability has been resolved;

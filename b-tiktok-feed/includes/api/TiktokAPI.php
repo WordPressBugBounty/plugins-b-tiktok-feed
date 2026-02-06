@@ -140,9 +140,9 @@ if(!class_exists('TTP_TikTok_Api')) {
 
         public function ttp_tiktok_clear()
         {
-            if (!wp_verify_nonce(sanitize_text_field($_GET['nonce']), 'wp_rest')) {
-                echo wp_kses_post(wp_json_encode(['invalid nonce']));
-                wp_die();
+
+            if (!wp_verify_nonce(sanitize_text_field($_GET['nonce']), 'ttp_fetch_data_nonce') || !current_user_can('manage_options')) {
+                wp_send_json_error('invalid access');
             }
 
             $action = sanitize_text_field($_GET['action_type']) ?? 'clear_cache';
@@ -175,16 +175,21 @@ if(!class_exists('TTP_TikTok_Api')) {
          * @return void
          */
         public function admin_init()
-        {
-            if (isset($_GET['data'])) {
-                $data = json_decode(stripslashes(sanitize_text_field($_GET['data'])), true);
-                if (isset($data['data'])) {
-                    $data = $data['data'];
+        { 
+            $nonce = isset($_GET['nonce']) ? sanitize_text_field($_GET['nonce']) : '';
+            if ( isset($_GET['nonce']) && wp_verify_nonce( $nonce, 'ttp_data_get_nonce')) {
+                 if (isset($_GET['data']) && current_user_can('manage_options')) {
+                    $data = json_decode(stripslashes(sanitize_text_field($_GET['data'])), true);
+                    if (isset($data['data'])) {
+                        $data = $data['data'];
+                    }
+                    set_transient('ttp_tiktok_authorized_data', $data, $data['refresh_expires_in']);
+                    set_transient('ttp_tiktok_access_token', $data['access_token'], 60 * 60 * 20);
+                    // update_option('tiktok_api_version', 'v2');
                 }
-                set_transient('ttp_tiktok_authorized_data', $data, $data['refresh_expires_in']);
-                set_transient('ttp_tiktok_access_token', $data['access_token'], 60 * 60 * 20);
-                // update_option('tiktok_api_version', 'v2');
             }
+
+           
         }
 
         /**
