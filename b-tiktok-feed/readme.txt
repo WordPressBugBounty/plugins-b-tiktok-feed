@@ -1,96 +1,77 @@
- === Feeds for TikTok – Display Video Feeds in Grid Layouts ===
+=== Feeds for TikTok – Keep Your Site Fresh with Your Latest Videos ===
 Contributors: bplugins, abuhayat, btechnologies
-Donate link: https://www.buymeacoffee.com/abuhayat
-Tags: block, tiktok, feed, tiktok gallery, tiktok plugin
-Requires at least: 6.5+
-Tested up to: 6.9
+Tags: tiktok, feed, tiktok gallery, tiktok plugin, block
+Tested up to: 7.0
 Stable tag: 1.0.25
 Requires PHP: 7.1
+Requires at least: 6.5+
+Donate link: https://www.buymeacoffee.com/abuhayat
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-Embed Tiktok feed in your website
+Embed your TikTok feed in WordPress with grid, profile, and popup layouts – turn website visitors into TikTok followers.
 
 == Description ==
 
-B Tiktok Feed Plugin is a block plugin by which you can embed your Tiktok feed on your websites.
-We have developed it in such a way that any user can give any desired look and feel on the widget. There are many options available by which you can turn your website visitors to Tiktok followers.
+**Show your latest TikTok videos right on your website – a beautiful, customizable feed that turns visitors into followers.**
 
+[**Demos**](https://wptiktokfeed.com/#demos) | [**Get Pro Version**](https://bplugins.com/products/my-social-feeds/#pricing)
 
-**[Demos](https://wptiktokfeed.com/#demos) || [Get Pro Version](https://bplugins.com/products/my-social-feeds/#pricing)**
-
-= Quick start tutorial =
 https://www.youtube.com/watch?v=8BRnf0wbbdQ
 
+### Why Feeds for TikTok?
 
-= Features =
+Your TikTok content works hard – let it work on your website too. **Feeds for TikTok** is a block plugin that embeds your TikTok feed on any post or page, keeping your site fresh with your latest videos automatically.
 
-- **Authorization, remove Authorization and clear Cache**
-- **TikTok profile and feeds show**
-- **Just TikTok feeds show** 
-- **Show/Hide TikTok profile option**
-- **Show/Hide profile image option**
-- **Show/Hide profile name option**
-- **Show/Hide profile share button option**
-- **Show/Hide profile info count option**
-- **Show/Hide profile biography option**
-- **Profile alignment, color, background color and padding option**
-- **Profile share button padding, color and hover color option**
-- **Video layout column option** 
-- **Video layout column gap option**
-- **Video layout row gap option**
-- **Video popup**
-- **Video popup slide and thumbnail** 
-- **Video TikTok load more button color and hover color**
-- **Load more button default 9 video show**
+The widget is built so any user can give it exactly the look and feel they want. Show your full TikTok profile with your feed, or just the videos; control colors, spacing, columns, and buttons; and let visitors watch videos in a popup without ever leaving your site.
 
+With plenty of display options and a simple authorization flow, it only takes minutes to connect your account and publish your feed.
 
-= Pro Features =
-- **Show/Hide videos/content option**
-- **Videos/Feed per page option**
-- **Show/Hide video overlay like, share, and view count option**
-- **Video overlay icon color set option**
-- **Load more button text change option**
-- **Cache time set option for profile and video**
-- **Profile layout select option**
-- **Profile name color and typography option**
-- **Share button change button text and typography option**
-- **Info count and text color option**
-- **ShortCode**
-- **Feed per page can be set according to the device**
-- **Lightbox show/video option**
-- **View on TikTok button show/hide option**
-- **Modal content show/hide option**
-- **Layout select an option**
-- **Three types of layout: Default, Slider, Masonry**
-- **You can set the feed image ratio to one of the five types: Landscape, Horizontal, Square, Vertical, and Portrait**
-- **Gallery background color set**
-- **Overlay color set**
-- **Content icon size set**
-- **Button typography, colors, padding set option**
-- **Pattern set option**
-- **Masonry Layout videos Info show/hide option added**
+### Free Features
 
+- **Simple Account Connection:** Authorize your TikTok account, remove authorization, and clear the cache anytime.
+- **Profile + Feed Display:** Show your TikTok profile with your feed, or display just the videos.
+- **Profile Controls:** Show/hide the profile section, profile image, name, share button, info counts, and biography.
+- **Profile Styling:** Alignment, color, background color, and padding options, plus share button padding, color, and hover color.
+- **Grid Layout Controls:** Set the number of video columns, column gap, and row gap.
+- **Video Popup:** Play videos in a popup with slide navigation and thumbnails.
+- **Load More Button:** Shows 9 videos by default with customizable button color and hover color.
 
-= How to use =
-- Go to the Plugins from WordPress admin dashboard.
-- Search for “B TikTok Feed”
-- Click “Install”
-- Activate the b-TikTok-Feed Plugin.
+### Pro Version
 
-* For installation help click on Installation Tab
+Want more layouts and control? The [**Pro version**](https://bplugins.com/products/my-social-feeds/#pricing) adds:
 
+- **Three Layout Types:** Default, Slider, and Masonry, plus a masonry video info show/hide option.
+- **Feed Image Ratios:** Landscape, Horizontal, Square, Vertical, and Portrait.
+- **Content Controls:** Show/hide videos and content, video overlay like/share/view counts, lightbox, "View on TikTok" button, and modal content.
+- **Per-Device Feeds:** Set how many videos appear per page on each device.
+- **Cache Control:** Set cache time for profile and videos.
+- **Profile Layout & Typography:** Choose profile layouts, and customize profile name color, typography, share button text, and info count colors.
+- **Shortcode Support:** Display your feed anywhere with a shortcode.
+- **Deep Styling:** Overlay colors and icon sizes, gallery background, load more button text, typography, colors, padding, and pattern options.
 
-= Feedback =
-- Liked that plugin? Hate it? Want a new feature? [Send me some feedback](mailto:support@bplugins.com 'Send feedback')
+### How to Use
 
+1. Go to **Plugins** in your WordPress admin dashboard.
+2. Search for **"Feeds for TikTok"** and click **Install**, then **Activate**.
+3. Authorize your TikTok account from the plugin settings.
+4. Add the block to any post or page and customize the layout.
+5. Publish – your TikTok feed is live!
 
-= ⭐ Check out the Parent Plugin of this plugin- =
+### Use Cases
+
+- **Creators & Influencers:** Grow your following by showcasing your latest videos to site visitors.
+- **Brands & Shops:** Display product videos and campaigns straight from TikTok.
+- **Agencies:** Add client social proof and fresh video content to any WordPress site.
+- **Bloggers:** Keep pages lively with auto-updating video content.
+
+Liked this plugin? Want a new feature? [Send us some feedback](mailto:support@bplugins.com 'Send feedback').
+
+### ⭐ Check out the Parent Plugin of this plugin-
 
 🔥 **[b Blocks](https://bblockswp.com/)** – Best gutenberg blocks collections for WordPress.
 
-
-= ⭐ Check out our other WordPress Plugins- =
+### ⭐ Check out our other WordPress Plugins-
 
 🔥 **[Html5 Audio Player](https://bplugins.com/products/html5-audio-player)** – Best audio player plugin for WordPress.
 
@@ -102,51 +83,59 @@ https://www.youtube.com/watch?v=8BRnf0wbbdQ
 
 🔥 **[3D Viewer](https://bplugins.com/products/3d-viewer)** – Display interactive 3D models on the webs.
 
-
 == Installation ==
 
-= From Gutenberg Editor: =
-1. Go to the WordPress Block/Gutenberg Editor
-2. Search For **B-TikTok-Feed Block**
-3. Click on the **B-TikTok-Feed Block** to add the block
+**From your WordPress dashboard (recommended):**
 
-= Download & Upload: =
-1. Download the **B-TikTok-Feed** plugin (*.zip file*)
-2. In your admin area, go to the Plugins menu and click on **Add New**
-3. Click on **Upload Plugin** and choose the **`B-TikTok-Feed.zip`** file and click on **Install Now**
-4. Activate the plugin and Enjoy!
+1. Go to **Plugins → Add New**.
+2. Search for **"Feeds for TikTok"**.
+3. Click **Install Now**, then **Activate**.
+4. Add the **TikTok Feed** block to any post or page in the Gutenberg editor.
 
-= Manually: =
-1. Download and upload the **B-TikTok-Feed Block** plugin to the **`/wp-content/plugins/`** directory
-2. Activate the plugin through the Plugins menu in WordPress
+**Manual installation:**
 
+1. Download the plugin (*.zip file*).
+2. In your admin area, go to **Plugins → Add New** and click **Upload Plugin**.
+3. Choose the plugin zip file and click **Install Now**.
+4. Activate the plugin through the **Plugins** menu in WordPress.
 
 == Frequently Asked Questions ==
 
-= Is Block Directory free? =
+= Is Feeds for TikTok free? =
 
-Yes, Block Directory is a free Gutenberg block plugin.
+Yes, it is a free Gutenberg block plugin. A Pro version with additional layouts and options is also available.
 
 = Does it work with any WordPress theme? =
 
 Yes, it will work with any standard WordPress theme.
 
+= How do I connect my TikTok account? =
+
+Authorize your TikTok account from the plugin settings. You can also remove the authorization and clear the cached feed at any time.
+
+= Can I show my TikTok profile along with the videos? =
+
+Yes. You can display your TikTok profile with the feed, show just the videos, and show or hide the profile image, name, share button, info counts, and biography individually.
+
+= Can visitors watch videos without leaving my site? =
+
+Yes. Videos open in a popup with slide navigation and thumbnails, so visitors stay on your website.
+
 = Can I change block settings? =
 
 Yes, you can change block settings from the Gutenberg block editor's right sidebar.
 
-= How many times can I reuse a block? =
+= How many times can I reuse the block? =
 
-You can use unlimited times as you want.
+You can use the block an unlimited number of times.
 
 = Where can I get support? =
 
-You can post your questions on the [support forum here](https://wordpress.org/support/plugin/b-tiktok-feed/)
+You can post your questions on the [support forum here](https://wordpress.org/support/plugin/b-tiktok-feed/).
 
 = Where do I report security bugs found in this plugin? =
 
 Please report security bugs found in the source code of the Tiktok Feed plugin through the [Patchstack Vulnerability Disclosure Program](https://patchstack.com/database/vdp/9e5fbc26-6328-4012-8bcb-4447159584af). The Patchstack team will assist you with verification, CVE assignment, and notify the developers of this plugin.
-
 
 == Screenshots ==
 
@@ -174,7 +163,7 @@ Please report security bugs found in the source code of the Tiktok Feed plugin t
 = 1.0.23 - 18 Nov, 2025 =
 * Solved Patchstack vulnerability issues;
 
-= 1.0.22 - 11 Aug, 2025 = 
+= 1.0.22 - 11 Aug, 2025 =
 * The Broken Access Control vulnerability has been resolved;
 
 = 1.0.21 - 18 April, 2025 =
@@ -213,8 +202,8 @@ Please report security bugs found in the source code of the Tiktok Feed plugin t
 = 1.0.10- 9 Nov,23 =
 * WordPress version update
 
-= 1.0.9 - 18 sept 2023 = 
-* This plugin is in conflict with another plugin; we are currently working on fixing it 
+= 1.0.9 - 18 sept 2023 =
+* This plugin is in conflict with another plugin; we are currently working on fixing it
 
 = 1.0.8 =
 * Some issues have been resolved
@@ -238,7 +227,7 @@ Please report security bugs found in the source code of the Tiktok Feed plugin t
 * Feeds are set according to the device option add
 
 = 1.0.4 =
-* ShortCode option add 
+* ShortCode option add
 
 = 1.0.3 =
 * Share button and load more button color option update
@@ -304,8 +293,8 @@ Please report security bugs found in the source code of the Tiktok Feed plugin t
 = 1.0.10- 9 Nov,23 =
 * WordPress version update
 
-= 1.0.9 - 18 sept 2023 = 
-* This plugin is in conflict with another plugin; we are currently working on fixing it 
+= 1.0.9 - 18 sept 2023 =
+* This plugin is in conflict with another plugin; we are currently working on fixing it
 
 = 1.0.8 =
 * Some issues have been resolved
@@ -329,7 +318,7 @@ Please report security bugs found in the source code of the Tiktok Feed plugin t
 * Feed per page device select
 
 = 1.0.4 =
-* ShortCode option add 
+* ShortCode option add
 
 
 = 1.0.3 =
