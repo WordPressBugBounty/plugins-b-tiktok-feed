@@ -3,7 +3,7 @@ Contributors: bplugins, abuhayat, btechnologies
 Tags: tiktok, feed, tiktok gallery, tiktok plugin, block
 Tested up to: 7.0
 Stable tag: 1.0.25
-Requires PHP: 7.1
+Requires PHP: 7.2.2 
 Requires at least: 6.5+
 Donate link: https://www.buymeacoffee.com/abuhayat
 License: GPLv3 or later
@@ -14,10 +14,10 @@ Embed your TikTok feed in WordPress with grid, profile, and popup layouts – tu
 == Description ==
 
 **Show your latest TikTok videos right on your website – a beautiful, customizable feed that turns visitors into followers.**
+ 
+[**Demos**](https://wptiktokfeed.com/#demos) | [**Get Pro Version**](https://bplugins.com/products/my-social-feeds/#pricing) ß
 
-[**Demos**](https://wptiktokfeed.com/#demos) | [**Get Pro Version**](https://bplugins.com/products/my-social-feeds/#pricing)
-
-https://www.youtube.com/watch?v=8BRnf0wbbdQ
+https://www.youtube.com/watch?v=8BRnf0wbbdQ 
 
 ### Why Feeds for TikTok?
 
